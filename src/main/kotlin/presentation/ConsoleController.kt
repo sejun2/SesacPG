@@ -1,9 +1,5 @@
 package presentation
 
-import domain.repository.ISesacRestaurantOrderRepository
-import domain.repository.ISesacRestaurantPaymentRepository
-import domain.repository.ISesacRestaurantSalesRepository
-
 class ConsoleController(
 ) {
 
@@ -32,5 +28,4 @@ class ConsoleController(
             }
         }
     }
-
 }

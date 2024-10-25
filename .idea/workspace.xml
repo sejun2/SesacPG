@@ -5,15 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3565c664-36c8-4bcf-9728-9ffb80d0cc42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/PaymentScreen.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/di/SesacServiceLocator.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MainApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/repository/SesacRestaurantPaymentRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/repository/SesacRestaurantPaymentRepositoryImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/model/Order.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/model/Order.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/ConsoleController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/ConsoleController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/HomeScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/viewmodel/PaymentViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/viewmodel/PaymentViewModel.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/data/repository/SesacRestaurantPaymentRepositoryImplTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/data/repository/SesacRestaurantPaymentRepositoryImplTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/data/repository/SesacRestaurantSalesRepositoryImplTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/data/repository/SesacRestaurantSalesRepositoryImplTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +100,7 @@
       <recent name="data.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainApplicationKt">
+  <component name="RunManager" selected="Gradle.Tests in 'data.repository'">
     <configuration name="SesacRestaurantOrderRepositoryImplTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -211,10 +206,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'data.repository'" />
         <item itemvalue="Kotlin.MainApplicationKt" />
         <item itemvalue="Gradle.SesacRestaurantPaymentRepositoryImplTest.paymentTest" />
         <item itemvalue="Gradle.SesacRestaurantOrderRepositoryImplTest" />
-        <item itemvalue="Gradle.Tests in 'data.repository'" />
         <item itemvalue="Gradle.SesacRestaurantOrderRepositoryImplTest.when additional order for existing, then returns added order" />
       </list>
     </recent_temporary>

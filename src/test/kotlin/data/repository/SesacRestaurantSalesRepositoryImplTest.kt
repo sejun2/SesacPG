@@ -4,17 +4,14 @@ import data.datasource.SesacOrderDataSource
 import data.dto.OrderDTO
 import data.dto.toDomain
 import domain.model.SesacMenu
-import domain.repository.ISesacRestaurantPaymentRepository
 import domain.repository.ISesacRestaurantSalesRepository
 import io.mockk.every
 import io.mockk.mockk
 import org.junit.jupiter.api.AfterAll
-import org.junit.jupiter.api.AfterEach
-import org.junit.jupiter.api.BeforeEach
-import org.junit.jupiter.api.Test
-
-import org.junit.jupiter.api.Assertions.*
+import org.junit.jupiter.api.Assertions.assertArrayEquals
+import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.BeforeAll
+import org.junit.jupiter.api.Test
 
 class SesacRestaurantSalesRepositoryImplTest {
 
@@ -94,14 +91,14 @@ class SesacRestaurantSalesRepositoryImplTest {
     fun getSalesForTable() {
         val res = repository.getSalesForTable(1)
 
-        kotlin.test.assertEquals(42500 + 84000 + 40000, res)
+        assertEquals(42500 + 84000 + 40000, res)
     }
 
     @Test
     fun getWholeSales() {
         val res = repository.getWholeSales()
 
-        kotlin.test.assertEquals(90000 + 48000 + 25500 + 90000 + 48000 + 42500 + 84000 + 40000, res)
+        assertEquals(90000 + 48000 + 25500 + 90000 + 48000 + 42500 + 84000 + 40000, res)
     }
 
     @Test
