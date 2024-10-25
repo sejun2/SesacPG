@@ -6,8 +6,8 @@ import domain.model.SesacMenu
 data class OrderDTO(
     val id: Int,
     val tableNumber: Int,
-    val orderedTime: Int,
-    val paidTime: Int?,
+    val orderedTime: Long,
+    val paidTime: Long?,
     val price: Int,
     val paid: Boolean,
     val menus: Map<SesacMenu, Int>

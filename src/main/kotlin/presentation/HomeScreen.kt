@@ -9,7 +9,7 @@ class HomeScreen : BaseScreen {
         return when (readlnOrNull() ?: "n") {
             "1" -> {
                 println("1선택")
-                SalesScreen()
+                OrderScreen()
             }
 
             "2" -> {

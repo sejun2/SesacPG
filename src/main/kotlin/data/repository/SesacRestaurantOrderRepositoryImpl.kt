@@ -51,7 +51,7 @@ class SesacRestaurantOrderRepositoryImpl(private val sesacOrderDataSource: Sesac
             val orderDto = OrderDTO(
                 id = lastId + 1,
                 tableNumber = tableNumber,
-                orderedTime = System.currentTimeMillis().toInt(),
+                orderedTime = System.currentTimeMillis(),
                 paidTime = null,
                 price = menus.getWholePrice(),
                 paid = false,

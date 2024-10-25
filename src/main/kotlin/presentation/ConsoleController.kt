@@ -24,6 +24,10 @@ class ConsoleController(
                 is HomeScreen -> {
                     currentScreen = HomeScreen()
                 }
+
+                is OrderScreen -> {
+                    currentScreen = OrderScreen()
+                }
             }
         }
     }

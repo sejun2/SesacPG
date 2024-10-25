@@ -86,7 +86,7 @@ class SesacRestaurantOrderRepositoryImplTest {
         val expect = Order(
             id = 4,
             tableNumber = 55,
-            orderedTime = System.currentTimeMillis().toInt(),
+            orderedTime = System.currentTimeMillis(),
             paidTime = null,
             price = hashMapOf(
                 SesacMenu.BIBIMBAP to 5,
@@ -120,7 +120,7 @@ class SesacRestaurantOrderRepositoryImplTest {
         val expect = Order(
             id = 1,
             tableNumber = 1,
-            orderedTime = System.currentTimeMillis().toInt(),
+            orderedTime = System.currentTimeMillis(),
             paidTime = null,
             price = hashMapOf(
                 SesacMenu.BIBIMBAP to 10,

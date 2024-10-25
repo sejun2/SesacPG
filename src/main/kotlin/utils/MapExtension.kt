@@ -17,3 +17,13 @@ fun Map<SesacMenu, Int>.getWholePrice(): Int {
 
     return total
 }
+
+fun Map<SesacMenu, Int>.toPrettyString(): String {
+    var res = ""
+
+    this.entries.forEach {
+        res += "메뉴이름: ${it.key.menuName}  개수: ${it.value} "
+    }
+
+    return res
+}

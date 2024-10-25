@@ -3,6 +3,7 @@ package presentation
 import data.datasource.SesacOrderDataSource
 import data.repository.SesacRestaurantSalesRepositoryImpl
 import domain.model.SesacMenu
+import domain.model.toPrettyString
 import presentation.viewmodel.SalesViewModel
 
 class SalesScreen : BaseScreen {
@@ -23,7 +24,7 @@ class SalesScreen : BaseScreen {
             "1" -> {
                 println("테이블 별 매출")
                 println("테이블을 선택하세요 : 1~7")
-                val tableNumber = readlnOrNull()?.toInt() ?: -1
+                val tableNumber = readln().toInt()
                 val res = salesViewModel.getSalesForTable(tableNumber)
                 println(res)
                 null
@@ -31,8 +32,8 @@ class SalesScreen : BaseScreen {
 
             "2" -> {
                 println("메뉴 별 매출")
-                println("메뉴를 입력하세요: 김치찌개, 돈까스, 된장찌개, 순두부찌개, 비빔밥")
-                val menu = SesacMenu.entries.find { it.menuName == readlnOrNull() }
+                println("메뉴를 입력하세요: 김치찌개, 돈까스, 된장찌개, 순두부찌개,")
+                val menu = SesacMenu.getSesacMenuByMenuName(readlnOrNull() ?: "")
 
                 menu?.let {
                     val res = salesViewModel.getSalesForMenu(sesacMenu = menu)
@@ -52,7 +53,7 @@ class SalesScreen : BaseScreen {
             "4" -> {
                 println("계산 안된 테이블 리스트 출력")
                 val res = salesViewModel.getUnpaidTables()
-                println(res)
+                println(res.toPrettyString())
                 null
             }
 
