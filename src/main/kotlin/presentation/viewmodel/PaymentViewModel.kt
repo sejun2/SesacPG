@@ -9,11 +9,11 @@ class PaymentViewModel(
     private val salesRepository: ISesacRestaurantSalesRepository
 ) {
 
-    fun getUnpaidOrder() =
+    suspend fun getUnpaidOrder() =
         salesRepository.getUnpaidOrder()
 
 
-    fun payment(order: Order) =
+    suspend fun payment(order: Order) =
         paymentRepository.payment(order)
 
 }

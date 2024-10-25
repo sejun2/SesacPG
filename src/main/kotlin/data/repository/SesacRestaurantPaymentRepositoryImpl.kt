@@ -12,7 +12,7 @@ import domain.repository.ISesacRestaurantPaymentRepository
 class SesacRestaurantPaymentRepositoryImpl(private val sesacOrderDataSource: SesacOrderDataSource) :
     ISesacRestaurantPaymentRepository {
 
-    override fun payment(order: Order): Order {
+    override suspend fun payment(order: Order): Order {
         val orderDto = order.toDto()
 
         // get all order list
@@ -37,8 +37,6 @@ class SesacRestaurantPaymentRepositoryImpl(private val sesacOrderDataSource: Ses
         allOrderList.add(index, paidOrderDto)
 
         sesacOrderDataSource.saveOrder(Gson().toJson(allOrderList))
-
-        println(allOrderList)
 
         return paidOrderDto.toDomain()
     }

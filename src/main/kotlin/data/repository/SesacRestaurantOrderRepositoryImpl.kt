@@ -14,7 +14,7 @@ import kotlin.collections.ArrayList
 
 class SesacRestaurantOrderRepositoryImpl(private val sesacOrderDataSource: SesacOrderDataSource) :
     ISesacRestaurantOrderRepository {
-    override fun order(menus: Map<SesacMenu, Int>, tableNumber: Int): Order {
+    override suspend fun order(menus: Map<SesacMenu, Int>, tableNumber: Int): Order {
         // get all order list
         val orderListJson = sesacOrderDataSource.getOrder()
 

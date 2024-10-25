@@ -11,7 +11,7 @@ import domain.repository.ISesacRestaurantSalesRepository
 
 class SesacRestaurantSalesRepositoryImpl(private val sesacOrderDataSource: SesacOrderDataSource) :
     ISesacRestaurantSalesRepository {
-    override fun getSalesForMenu(menu: SesacMenu): Int {
+    override suspend fun getSalesForMenu(menu: SesacMenu): Int {
         var total = 0
 
         // get all order list
@@ -34,7 +34,7 @@ class SesacRestaurantSalesRepositoryImpl(private val sesacOrderDataSource: Sesac
         return total
     }
 
-    override fun getSalesForTable(tableNumber: Int): Int {
+    override suspend fun getSalesForTable(tableNumber: Int): Int {
         var total = 0
 
         // get all order list
@@ -57,7 +57,7 @@ class SesacRestaurantSalesRepositoryImpl(private val sesacOrderDataSource: Sesac
         return total
     }
 
-    override fun getWholeSales(): Int {
+    override suspend fun getWholeSales(): Int {
         var total = 0
 
         // get all order list
@@ -76,7 +76,7 @@ class SesacRestaurantSalesRepositoryImpl(private val sesacOrderDataSource: Sesac
         return total
     }
 
-    override fun getUnpaidOrder(): List<Order> {
+    override suspend fun getUnpaidOrder(): List<Order> {
         var total = 0
 
         // get all order list

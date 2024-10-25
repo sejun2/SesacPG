@@ -4,6 +4,9 @@ import data.datasource.SesacOrderDataSource
 import data.repository.SesacRestaurantPaymentRepositoryImpl
 import data.repository.SesacRestaurantSalesRepositoryImpl
 import domain.model.toPrettyString
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import presentation.viewmodel.PaymentViewModel
 
 class PaymentScreen : BaseScreen {
@@ -17,13 +20,15 @@ class PaymentScreen : BaseScreen {
     override fun display() {
         println("결제하기")
         println("미결제 목록")
-        println(viewModel.getUnpaidOrder().toPrettyString())
+        CoroutineScope(Dispatchers.IO).launch {
+            println(viewModel.getUnpaidOrder().toPrettyString())
+        }
     }
 
     override fun handleInput(): BaseScreen? {
         val orderList = viewModel.getUnpaidOrder()
 
-        if(orderList.isEmpty()){
+        if (orderList.isEmpty()) {
             println("결제할 주문이 없습니다")
             return HomeScreen()
         }
@@ -35,8 +40,10 @@ class PaymentScreen : BaseScreen {
             it.id == orderId
         }
 
-        selectedOrder?.let {
-            val res = viewModel.payment(it)
+        CoroutineScope(Dispatchers.Main).launch {
+            selectedOrder?.let {
+                val res = viewModel.payment(it)
+            }
         }
 
         return null

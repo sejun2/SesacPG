@@ -1,43 +1,49 @@
 package data.datasource
 
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import java.io.File
 
 class SesacOrderDataSource() {
-    fun getOrder(): String {
-        try {
-            val file = File("pg_db")
+    suspend fun getOrder(): String {
+        return withContext(Dispatchers.IO) {
+            try {
+                val file = File("pg_db")
 
-            if (!file.exists()) {
-                file.createNewFile()
+                if (!file.exists()) {
+                    file.createNewFile()
+                }
+
+                with(file.reader()) {
+                    val res = readText()
+                    close()
+
+                    return@withContext res
+                }
+            } catch (e: Exception) {
+                return@withContext ""
             }
-
-            with(file.reader()) {
-                val res = readText()
-                close()
-
-                return res
-            }
-        } catch (e: Exception) {
-            return ""
         }
     }
 
-    fun saveOrder(json: String): Boolean {
-        try {
-            val file = File("pg_db")
+    suspend fun saveOrder(json: String): Boolean {
+        return withContext(Dispatchers.IO) {
+            try {
+                val file = File("pg_db")
 
-            if (!file.exists()) {
-                file.createNewFile()
+                if (!file.exists()) {
+                    file.createNewFile()
+                }
+
+                with(file.writer()) {
+                    val res = write(json)
+                    close()
+
+                    return@withContext true
+                }
+            } catch (e: Exception) {
+                return@withContext false
             }
-
-            with(file.writer()) {
-                val res = write(json)
-                close()
-
-                return true
-            }
-        } catch (e: Exception) {
-            return false
         }
     }
 }
