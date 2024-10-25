@@ -79,7 +79,7 @@ class SesacRestaurantPaymentRepositoryImplTest {
 
     @Test
     fun paymentTest() {
-        val expect = Order(
+        val selectedOrder = Order(
             id = 1,
             tableNumber = 1,
             orderedTime = 123123123,
@@ -93,8 +93,10 @@ class SesacRestaurantPaymentRepositoryImplTest {
             price = 42500 + 84000 + 40000
         )
 
-        val res = repository.payment(expect)
+        val res = repository.payment(selectedOrder)
 
-        assertEquals(expected = expect, actual = res)
+        assertEquals(expected = true, actual = res.paid)
+        assertNotNull(res.paidTime)
+        assertEquals(selectedOrder.id, res.id)
     }
 }

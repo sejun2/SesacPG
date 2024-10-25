@@ -27,6 +27,7 @@ fun Order.toDto(): OrderDTO {
 
 fun Order.toPrettyString(): String {
     return """
+        주문번호: ${this.id}
         테이블번호: ${this.tableNumber}
         메뉴: ${this.menus.toPrettyString()}
         가격: ${this.price}

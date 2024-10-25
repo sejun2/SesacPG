@@ -1,5 +1,6 @@
 package presentation.viewmodel
 
+import domain.model.Order
 import domain.repository.ISesacRestaurantPaymentRepository
 import domain.repository.ISesacRestaurantSalesRepository
 
@@ -12,7 +13,7 @@ class PaymentViewModel(
         salesRepository.getUnpaidOrder()
 
 
-    fun payment() {
+    fun payment(order: Order) =
+        paymentRepository.payment(order)
 
-    }
 }

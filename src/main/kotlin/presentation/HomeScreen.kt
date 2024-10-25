@@ -1,5 +1,7 @@
 package presentation
 
+import kotlin.system.exitProcess
+
 class HomeScreen : BaseScreen {
     override fun display() {
         println("1, 테이블 별 주문 2. 매출관리 3.테이블 계산 0.P/G 종료")
@@ -19,12 +21,11 @@ class HomeScreen : BaseScreen {
 
             "3" -> {
                 println("3선택")
-                null
+                PaymentScreen()
             }
 
-            "4" -> {
-                println("4선택")
-                null
+            "0" -> {
+                exitProcess(0)
             }
 
             else -> {

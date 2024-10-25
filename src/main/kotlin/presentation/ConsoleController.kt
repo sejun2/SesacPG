@@ -5,9 +5,6 @@ import domain.repository.ISesacRestaurantPaymentRepository
 import domain.repository.ISesacRestaurantSalesRepository
 
 class ConsoleController(
-    val orderRepository: ISesacRestaurantOrderRepository,
-    val salesRepository: ISesacRestaurantSalesRepository,
-    val paymentRepository: ISesacRestaurantPaymentRepository
 ) {
 
     var currentScreen: BaseScreen = HomeScreen()
@@ -27,6 +24,10 @@ class ConsoleController(
 
                 is OrderScreen -> {
                     currentScreen = OrderScreen()
+                }
+
+                is PaymentScreen -> {
+                    currentScreen = PaymentScreen()
                 }
             }
         }

@@ -20,11 +20,7 @@ class MainApplication {
         val salesRepository: ISesacRestaurantSalesRepository =
             SesacRestaurantSalesRepositoryImpl(sesacOrderDataSource = sesacOrderDataSource)
 
-        ConsoleController(
-            orderRepository = orderRepository,
-            salesRepository = salesRepository,
-            paymentRepository = paymentRepository
-        ).start()
+        ConsoleController().start()
     }
 }
 

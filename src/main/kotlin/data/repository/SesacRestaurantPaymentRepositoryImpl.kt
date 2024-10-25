@@ -4,6 +4,7 @@ import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import data.datasource.SesacOrderDataSource
 import data.dto.OrderDTO
+import data.dto.toDomain
 import domain.model.Order
 import domain.model.toDto
 import domain.repository.ISesacRestaurantPaymentRepository
@@ -27,11 +28,18 @@ class SesacRestaurantPaymentRepositoryImpl(private val sesacOrderDataSource: Ses
             it.id == orderDto.id
         }
 
+        val paidOrderDto = orderDto.copy(
+            paid = true,
+            paidTime = System.currentTimeMillis(),
+        )
+
         allOrderList.removeAt(index)
-        allOrderList.add(index, orderDto)
+        allOrderList.add(index, paidOrderDto)
 
         sesacOrderDataSource.saveOrder(Gson().toJson(allOrderList))
 
-        return order
+        println(allOrderList)
+
+        return paidOrderDto.toDomain()
     }
 }
