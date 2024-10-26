@@ -10,6 +10,9 @@ class ConsoleController(
     var currentScreen: BaseScreen = HomeScreen()
 
     fun start() {
+
+        //TODO("Satoshi"): returns of handleInput can be types instead of real Instances
+        //TODO: or make screens as Singleton
         while (true) {
             currentScreen.display()
             when (currentScreen.handleInput()) {

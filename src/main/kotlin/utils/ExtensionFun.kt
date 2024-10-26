@@ -27,3 +27,4 @@ fun Map<SesacMenu, Int>.toPrettyString(): String {
 
     return res
 }
+

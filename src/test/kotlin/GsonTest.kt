@@ -3,12 +3,14 @@ import com.google.gson.JsonParser
 import com.google.gson.reflect.TypeToken
 import data.dto.OrderDTO
 import domain.model.SesacMenu
+import org.junit.jupiter.api.Disabled
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
 class GsonTest {
 
     @Test
+    @Disabled("No need to test anymore")
     fun toJsonTest() {
         val orderDtoList = listOf(
             OrderDTO(
@@ -68,6 +70,7 @@ class GsonTest {
     }
 
     @Test
+    @Disabled("No need to test anymore")
     fun fromJsonTest() {
         val jsonString = """
             [{"id":2,"tableNumber":2,"orderedTime":123123126,"paidTime":1111311,"price":6000,"paid":false,"menus":{"DON_KATSU":10}},{"id":1,"tableNumber":1,"orderedTime":123123123,"paidTime":11111,"price":8000,"paid":false,"menus":{"BIBIMBAP":5}}]

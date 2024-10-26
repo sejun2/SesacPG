@@ -3,6 +3,7 @@ package presentation
 import domain.model.SesacMenu
 import domain.model.toPrettyString
 import presentation.viewmodel.OrderViewModel
+import utils.setMenus
 
 class OrderScreen(private val orderViewModel: OrderViewModel) : BaseScreen {
     override fun display() {
@@ -19,11 +20,12 @@ class OrderScreen(private val orderViewModel: OrderViewModel) : BaseScreen {
 
             println("메뉴(김치찌개, 돈까스, 된장찌개, 순두부찌개, 비빔밥),개수;")
             val menuTable = setMenus(readlnOrNull() ?: "")
-
-            if (menuTable.isNotEmpty()) {
-                val res = orderViewModel.order(menuTable, tableNumber ?: -1)
-                println("주문 내역: ${res.toPrettyString()}")
+            require(menuTable.isNotEmpty()) {
+                throw IllegalStateException("메뉴를 올바르게 입력해주세요")
             }
+
+            val res = orderViewModel.order(menuTable, tableNumber ?: -1)
+            println("주문 내역: ${res.toPrettyString()}")
         } catch (e: Exception) {
             println(e.message)
         } finally {
@@ -31,26 +33,4 @@ class OrderScreen(private val orderViewModel: OrderViewModel) : BaseScreen {
         }
     }
 
-    private fun setMenus(order: String): HashMap<SesacMenu, Int> {
-        val menuTable = HashMap<SesacMenu, Int>()
-        val split1 = order.split(";")
-
-        split1.forEach { orderString ->
-            if (orderString.isEmpty()) {
-                return@forEach
-            }
-
-            val split2 = orderString.split(",")
-            val menu = SesacMenu.getSesacMenuByMenuName(split2[0])
-            println("menu: $menu")
-            val count = split2[1].toInt()
-            println("count: $count")
-
-            menu?.let {
-                menuTable[it] = count
-            }
-        }
-
-        return menuTable
-    }
 }

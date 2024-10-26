@@ -5,15 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3565c664-36c8-4bcf-9728-9ffb80d0cc42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/HomeScreenTest.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/OrderScreenTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/utils/UtilFun.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/utils/UtilFunKtTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pg_db" beforeDir="false" afterPath="$PROJECT_DIR$/pg_db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/repository/SesacRestaurantPaymentRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/repository/SesacRestaurantPaymentRepositoryImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/ConsoleController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/ConsoleController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/HomeScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/OrderScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/OrderScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/SalesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/SalesScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/MapExtension.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/utils/ExtensionFun.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/GsonTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/GsonTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/OrderScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/OrderScreenTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +85,7 @@
     "Gradle.OrderScreenTest.display.executor": "Run",
     "Gradle.OrderScreenTest.executor": "Run",
     "Gradle.OrderScreenTest.order fail test, when input out ranged table number, then it says error message.executor": "Run",
+    "Gradle.OrderScreenTest.order fail test, when input wrong menu string, then it says error message.executor": "Run",
     "Gradle.OrderScreenTest.order success test.executor": "Run",
     "Gradle.OrderScreenTest.when test.executor": "Run",
     "Gradle.SesacRestaurantOrderRepositoryImplTest.executor": "Run",
@@ -94,7 +95,15 @@
     "Gradle.SesacRestaurantPaymentRepositoryImplTest.paymentTest.executor": "Run",
     "Gradle.SesacRestaurantSalesRepositoryImplTest.executor": "Run",
     "Gradle.SesacRestaurantSalesRepositoryImplTest.getSalesForMenu.executor": "Run",
+    "Gradle.Tests in 'SesacPG.test'.executor": "Run",
     "Gradle.Tests in 'data.repository'.executor": "Run",
+    "Gradle.UtilFunKtTest.executor": "Run",
+    "Gradle.UtilFunKtTest.setMenu happy path test1.executor": "Run",
+    "Gradle.UtilFunKtTest.setMenu happy path test2.executor": "Run",
+    "Gradle.UtilFunKtTest.setMenu happy path test3.executor": "Run",
+    "Gradle.UtilFunKtTest.setMenu sad path test1.executor": "Run",
+    "Gradle.UtilFunKtTest.setMenu sad path test2.executor": "Run",
+    "JUnit.OrderScreenTest.executor": "Run",
     "Kotlin.MainApplicationKt.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -116,12 +125,35 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="utils" />
       <recent name="presentation" />
       <recent name="data.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Kotlin.MainApplicationKt">
-    <configuration name="OrderScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.Tests in 'SesacPG.test'">
+    <configuration name="Tests in 'SesacPG.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UtilFunKtTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -134,7 +166,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;presentation.OrderScreenTest&quot;" />
+            <option value="&quot;utils.UtilFunKtTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -145,7 +177,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="OrderScreenTest.order fail test, when input out ranged table number, then it says error message" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UtilFunKtTest.setMenu happy path test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -158,7 +190,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;presentation.OrderScreenTest.order fail test, when input out ranged table number, then it says error message&quot;" />
+            <option value="&quot;utils.UtilFunKtTest.setMenu happy path test2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,7 +201,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="OrderScreenTest.order success test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UtilFunKtTest.setMenu happy path test3" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -182,7 +214,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;presentation.OrderScreenTest.order success test&quot;" />
+            <option value="&quot;utils.UtilFunKtTest.setMenu happy path test3&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -193,7 +225,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="OrderScreenTest.when test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UtilFunKtTest.setMenu sad path test2" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -206,7 +238,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;presentation.OrderScreenTest.when test&quot;" />
+            <option value="&quot;utils.UtilFunKtTest.setMenu sad path test2&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -216,21 +248,14 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <RunAsTest>true</RunAsTest>
       <method v="2" />
-    </configuration>
-    <configuration name="MainApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MainApplicationKt" />
-      <module name="SesacPG.main" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Kotlin.MainApplicationKt" />
-        <item itemvalue="Gradle.OrderScreenTest.order fail test, when input out ranged table number, then it says error message" />
-        <item itemvalue="Gradle.OrderScreenTest.order success test" />
-        <item itemvalue="Gradle.OrderScreenTest.when test" />
-        <item itemvalue="Gradle.OrderScreenTest" />
+        <item itemvalue="Gradle.Tests in 'SesacPG.test'" />
+        <item itemvalue="Gradle.UtilFunKtTest.setMenu happy path test3" />
+        <item itemvalue="Gradle.UtilFunKtTest.setMenu happy path test2" />
+        <item itemvalue="Gradle.UtilFunKtTest" />
+        <item itemvalue="Gradle.UtilFunKtTest.setMenu sad path test2" />
       </list>
     </recent_temporary>
   </component>

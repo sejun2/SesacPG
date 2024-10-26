@@ -69,6 +69,8 @@ class OrderScreenTest {
 
         val res = orderScreen.handleInput()
 
+        assert(outputStreamCaptor.toString().trimIndent().contains("테이블 번호: 1~7"))
+        assert(outputStreamCaptor.toString().trimIndent().contains("메뉴(김치찌개, 돈까스, 된장찌개, 순두부찌개, 비빔밥),개수;"))
         assert(outputStreamCaptor.toString().trimIndent().contains("주문 내역:"))
         assert(outputStreamCaptor.toString().trimIndent().contains("테이블번호: 1"))
         assert(outputStreamCaptor.toString().trimIndent().contains("메뉴이름: 된장찌개"))
@@ -89,5 +91,25 @@ class OrderScreenTest {
         val res = orderScreen.handleInput()
 
        assert(outputStreamCaptor.toString().trimIndent().contains("1~7 사이의 번호를 입력해주세요"))
+    }
+
+    @Test
+    fun `order fail test, when input wrong menu string, then it says error message`(){
+        val simulatedInput1 = """
+            5
+            홍두깨국수,500;
+            """".trimIndent() // it has no such menu
+        val inputStream1 = ByteArrayInputStream(simulatedInput1.toByteArray())
+
+        System.setIn(inputStream1)
+
+        val res = orderScreen.handleInput()
+
+        assert(outputStreamCaptor.toString().trimIndent().contains("메뉴를 올바르게 입력해주세요"))
+    }
+
+    @Test
+    fun `setMenus() test`(){
+
     }
 }
