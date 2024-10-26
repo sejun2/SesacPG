@@ -32,7 +32,7 @@ class SalesScreen : BaseScreen {
 
             "2" -> {
                 println("메뉴 별 매출")
-                println("메뉴를 입력하세요: 김치찌개, 돈까스, 된장찌개, 순두부찌개,")
+                println("메뉴를 입력하세요: 김치찌개, 돈까스, 된장찌개, 순두부찌개, 비빔밥")
                 val menu = SesacMenu.getSesacMenuByMenuName(readlnOrNull() ?: "")
 
                 menu?.let {

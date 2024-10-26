@@ -1,5 +1,9 @@
 package presentation
 
+import data.datasource.SesacOrderDataSource
+import data.repository.SesacRestaurantOrderRepositoryImpl
+import presentation.viewmodel.OrderViewModel
+
 class ConsoleController(
 ) {
 
@@ -19,7 +23,13 @@ class ConsoleController(
                 }
 
                 is OrderScreen -> {
-                    currentScreen = OrderScreen()
+                    currentScreen = OrderScreen(
+                        OrderViewModel(
+                            orderRepository = SesacRestaurantOrderRepositoryImpl(
+                                sesacOrderDataSource = SesacOrderDataSource()
+                            )
+                        )
+                    )
                 }
 
                 is PaymentScreen -> {
@@ -28,4 +38,5 @@ class ConsoleController(
             }
         }
     }
+
 }

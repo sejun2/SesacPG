@@ -38,8 +38,6 @@ class SesacRestaurantPaymentRepositoryImpl(private val sesacOrderDataSource: Ses
 
         sesacOrderDataSource.saveOrder(Gson().toJson(allOrderList))
 
-        println(allOrderList)
-
         return paidOrderDto.toDomain()
     }
 }

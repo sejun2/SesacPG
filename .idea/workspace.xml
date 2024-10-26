@@ -5,10 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3565c664-36c8-4bcf-9728-9ffb80d0cc42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/di/SesacServiceLocator.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/HomeScreenTest.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/OrderScreenTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pg_db" beforeDir="false" afterPath="$PROJECT_DIR$/pg_db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/repository/SesacRestaurantPaymentRepositoryImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/repository/SesacRestaurantPaymentRepositoryImpl.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/ConsoleController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/ConsoleController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/data/repository/SesacRestaurantSalesRepositoryImplTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/data/repository/SesacRestaurantSalesRepositoryImplTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/HomeScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/OrderScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/OrderScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/SalesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/SalesScreen.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,29 +38,34 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit5 Test Class" />
         <option value="Kotlin Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "sejun2"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sejun2&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/sejun2/SesacPG.git",
-    "accountId": "db2936fb-c9d9-4e5c-aa24-05027cbad7ae"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/sejun2/SesacPG.git&quot;,
+    &quot;accountId&quot;: &quot;db2936fb-c9d9-4e5c-aa24-05027cbad7ae&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="JavaAutoRunManager">
+    <enabled-run-configurations>
+      <run-configuration type="GradleRunConfiguration" name="OrderScreenTest" />
+    </enabled-run-configurations>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2nsmKw566A9IrzQR9RQUycRNPue" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -68,6 +78,15 @@
     "Gradle.GsonTest.executor": "Run",
     "Gradle.GsonTest.fromJsonTest.executor": "Debug",
     "Gradle.GsonTest.toJsonTest.executor": "Run",
+    "Gradle.HomeScreenTest.display correct options.executor": "Run",
+    "Gradle.HomeScreenTest.executor": "Run",
+    "Gradle.HomeScreenTest.handleInput.executor": "Run",
+    "Gradle.HomeScreenTest.when option 0 is selected, then exit process.executor": "Run",
+    "Gradle.OrderScreenTest.display.executor": "Run",
+    "Gradle.OrderScreenTest.executor": "Run",
+    "Gradle.OrderScreenTest.order fail test, when input out ranged table number, then it says error message.executor": "Run",
+    "Gradle.OrderScreenTest.order success test.executor": "Run",
+    "Gradle.OrderScreenTest.when test.executor": "Run",
     "Gradle.SesacRestaurantOrderRepositoryImplTest.executor": "Run",
     "Gradle.SesacRestaurantOrderRepositoryImplTest.orderTest.executor": "Run",
     "Gradle.SesacRestaurantOrderRepositoryImplTest.when additional order for existing, then returns added order.executor": "Run",
@@ -97,11 +116,12 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="presentation" />
       <recent name="data.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'data.repository'">
-    <configuration name="SesacRestaurantOrderRepositoryImplTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Kotlin.MainApplicationKt">
+    <configuration name="OrderScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -114,7 +134,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;data.repository.SesacRestaurantOrderRepositoryImplTest&quot;" />
+            <option value="&quot;presentation.OrderScreenTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -125,7 +145,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SesacRestaurantOrderRepositoryImplTest.when additional order for existing, then returns added order" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderScreenTest.order fail test, when input out ranged table number, then it says error message" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -138,7 +158,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;data.repository.SesacRestaurantOrderRepositoryImplTest.when additional order for existing, then returns added order&quot;" />
+            <option value="&quot;presentation.OrderScreenTest.order fail test, when input out ranged table number, then it says error message&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -149,7 +169,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SesacRestaurantPaymentRepositoryImplTest.paymentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderScreenTest.order success test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -162,7 +182,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;data.repository.SesacRestaurantPaymentRepositoryImplTest.paymentTest&quot;" />
+            <option value="&quot;presentation.OrderScreenTest.order success test&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -173,7 +193,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'data.repository'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderScreenTest.when test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -186,7 +206,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;data.repository.*&quot;" />
+            <option value="&quot;presentation.OrderScreenTest.when test&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -206,11 +226,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'data.repository'" />
         <item itemvalue="Kotlin.MainApplicationKt" />
-        <item itemvalue="Gradle.SesacRestaurantPaymentRepositoryImplTest.paymentTest" />
-        <item itemvalue="Gradle.SesacRestaurantOrderRepositoryImplTest" />
-        <item itemvalue="Gradle.SesacRestaurantOrderRepositoryImplTest.when additional order for existing, then returns added order" />
+        <item itemvalue="Gradle.OrderScreenTest.order fail test, when input out ranged table number, then it says error message" />
+        <item itemvalue="Gradle.OrderScreenTest.order success test" />
+        <item itemvalue="Gradle.OrderScreenTest.when test" />
+        <item itemvalue="Gradle.OrderScreenTest" />
       </list>
     </recent_temporary>
   </component>
