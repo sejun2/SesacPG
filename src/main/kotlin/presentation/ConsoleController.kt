@@ -26,13 +26,7 @@ class ConsoleController(
                 }
 
                 is OrderScreen -> {
-                    currentScreen = OrderScreen(
-                        OrderViewModel(
-                            orderRepository = SesacRestaurantOrderRepositoryImpl(
-                                sesacOrderDataSource = SesacOrderDataSource()
-                            )
-                        )
-                    )
+                    currentScreen = OrderScreen()
                 }
 
                 is PaymentScreen -> {

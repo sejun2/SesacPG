@@ -6,13 +6,14 @@ import data.repository.SesacRestaurantSalesRepositoryImpl
 import domain.model.toPrettyString
 import presentation.viewmodel.PaymentViewModel
 
-class PaymentScreen : BaseScreen {
+class PaymentScreen(
     private val viewModel: PaymentViewModel = PaymentViewModel(
         paymentRepository = SesacRestaurantPaymentRepositoryImpl(
             SesacOrderDataSource()
         ),
         salesRepository = SesacRestaurantSalesRepositoryImpl(SesacOrderDataSource())
     )
+) : BaseScreen {
 
     override fun display() {
         println("결제하기")
@@ -23,7 +24,7 @@ class PaymentScreen : BaseScreen {
     override fun handleInput(): BaseScreen? {
         val orderList = viewModel.getUnpaidOrder()
 
-        if(orderList.isEmpty()){
+        if (orderList.isEmpty()) {
             println("결제할 주문이 없습니다")
             return HomeScreen()
         }

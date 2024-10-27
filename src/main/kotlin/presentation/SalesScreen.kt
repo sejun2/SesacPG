@@ -6,9 +6,13 @@ import domain.model.SesacMenu
 import domain.model.toPrettyString
 import presentation.viewmodel.SalesViewModel
 
-class SalesScreen : BaseScreen {
-    private val salesViewModel: SalesViewModel =
-        SalesViewModel(SesacRestaurantSalesRepositoryImpl(SesacOrderDataSource()))
+class SalesScreen(
+    private val salesViewModel: SalesViewModel = SalesViewModel(
+        SesacRestaurantSalesRepositoryImpl(
+            SesacOrderDataSource()
+        )
+    )
+) : BaseScreen {
 
     override fun display() {
         println("1.테이블 별 매출 2.메뉴 별 매출 3.총 매출 4.계산 안된 테이블 리스트 출력 0.메인콘솔")
@@ -22,12 +26,21 @@ class SalesScreen : BaseScreen {
             }
 
             "1" -> {
-                println("테이블 별 매출")
-                println("테이블을 선택하세요 : 1~7")
-                val tableNumber = readln().toInt()
-                val res = salesViewModel.getSalesForTable(tableNumber)
-                println(res)
-                null
+                try {
+                    println("테이블 별 매출")
+                    println("테이블을 선택하세요 : 1~7")
+                    val tableNumber = readln().toInt()
+                    require(tableNumber in 1..7) {
+                        throw IllegalArgumentException("올바른 테이블 번호를 선택해주세요")
+                    }
+
+                    val res = salesViewModel.getSalesForTable(tableNumber)
+                    println(res)
+                    return null
+                } catch (e: Exception) {
+                    println(e.message)
+                    return null
+                }
             }
 
             "2" -> {

@@ -1,11 +1,18 @@
 package presentation
 
-import domain.model.SesacMenu
+import data.datasource.SesacOrderDataSource
+import data.repository.SesacRestaurantOrderRepositoryImpl
 import domain.model.toPrettyString
 import presentation.viewmodel.OrderViewModel
 import utils.setMenus
 
-class OrderScreen(private val orderViewModel: OrderViewModel) : BaseScreen {
+class OrderScreen(
+    private val orderViewModel: OrderViewModel = OrderViewModel(
+        orderRepository = SesacRestaurantOrderRepositoryImpl(
+            sesacOrderDataSource = SesacOrderDataSource()
+        )
+    )
+) : BaseScreen {
     override fun display() {
         println("주문하기")
     }
