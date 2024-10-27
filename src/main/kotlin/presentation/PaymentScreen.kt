@@ -38,6 +38,7 @@ class PaymentScreen(
 
         selectedOrder?.let {
             val res = viewModel.payment(it)
+            println("결제 완료\n${res.toPrettyString()}")
         }
 
         return null
