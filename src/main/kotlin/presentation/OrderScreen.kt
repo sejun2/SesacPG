@@ -28,7 +28,7 @@ class OrderScreen(
             println("메뉴(김치찌개, 돈까스, 된장찌개, 순두부찌개, 비빔밥),개수;")
             val menuTable = setMenus(readlnOrNull() ?: "")
             require(menuTable.isNotEmpty()) {
-                throw IllegalStateException("메뉴를 올바르게 입력해주세요")
+                throw IllegalArgumentException("메뉴를 올바르게 입력해주세요")
             }
 
             val res = orderViewModel.order(menuTable, tableNumber ?: -1)
