@@ -13,45 +13,45 @@ import presentation.viewmodel.SalesViewModel
 
 class MainApplication {
     fun run() {
-        SesacServiceLocator.setSingleton<SesacOrderDataSource>(SesacOrderDataSource())
+        SesacServiceLocator.registerSingleton<SesacOrderDataSource>(SesacOrderDataSource())
 
-        SesacServiceLocator.setSingleton<ISesacRestaurantSalesRepository>(
+        SesacServiceLocator.registerSingleton<ISesacRestaurantSalesRepository>(
             SesacRestaurantSalesRepositoryImpl(
                 SesacServiceLocator.get<SesacOrderDataSource>()
             )
         )
-        SesacServiceLocator.setSingleton<ISesacRestaurantPaymentRepository>(
+        SesacServiceLocator.registerSingleton<ISesacRestaurantPaymentRepository>(
             SesacRestaurantPaymentRepositoryImpl(
                 SesacServiceLocator.get<SesacOrderDataSource>()
             )
         )
-        SesacServiceLocator.setSingleton<ISesacRestaurantOrderRepository>(
+        SesacServiceLocator.registerSingleton<ISesacRestaurantOrderRepository>(
             SesacRestaurantOrderRepositoryImpl(
                 SesacServiceLocator.get<SesacOrderDataSource>()
             )
         )
 
-        SesacServiceLocator.setSingleton<OrderViewModel>(OrderViewModel(orderRepository = SesacServiceLocator.get<ISesacRestaurantOrderRepository>()))
-        SesacServiceLocator.setSingleton<PaymentViewModel>(
+        SesacServiceLocator.registerSingleton<OrderViewModel>(OrderViewModel(orderRepository = SesacServiceLocator.get<ISesacRestaurantOrderRepository>()))
+        SesacServiceLocator.registerSingleton<PaymentViewModel>(
             PaymentViewModel(
                 salesRepository = SesacServiceLocator.get<ISesacRestaurantSalesRepository>(),
                 paymentRepository = SesacServiceLocator.get<ISesacRestaurantPaymentRepository>()
             )
         )
-        SesacServiceLocator.setSingleton<SalesViewModel>(SalesViewModel(salesRepository = SesacServiceLocator.get<ISesacRestaurantSalesRepository>()))
+        SesacServiceLocator.registerSingleton<SalesViewModel>(SalesViewModel(salesRepository = SesacServiceLocator.get<ISesacRestaurantSalesRepository>()))
 
-        SesacServiceLocator.setSingleton<HomeScreen>(HomeScreen())
-        SesacServiceLocator.setSingleton<OrderScreen>(
+        SesacServiceLocator.registerSingleton<HomeScreen>(HomeScreen())
+        SesacServiceLocator.registerSingleton<OrderScreen>(
             OrderScreen(
                 orderViewModel = SesacServiceLocator.get<OrderViewModel>()
             )
         )
-        SesacServiceLocator.setSingleton<PaymentScreen>(
+        SesacServiceLocator.registerSingleton<PaymentScreen>(
             PaymentScreen(
                 viewModel = SesacServiceLocator.get<PaymentViewModel>()
             )
         )
-        SesacServiceLocator.setSingleton<SalesScreen>(
+        SesacServiceLocator.registerSingleton<SalesScreen>(
             SalesScreen(
                 salesViewModel = SesacServiceLocator.get<SalesViewModel>()
             )

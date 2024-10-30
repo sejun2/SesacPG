@@ -7,7 +7,7 @@ object SesacServiceLocator {
 
     val diCache = HashMap<Type, Any>()
 
-    inline fun <reified T : Any> setSingleton(instance: T) {
+    inline fun <reified T : Any> registerSingleton(instance: T) {
         diCache.put(T::class.java, instance)
     }
 

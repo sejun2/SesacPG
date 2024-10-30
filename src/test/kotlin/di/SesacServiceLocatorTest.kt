@@ -15,7 +15,7 @@ class SesacServiceLocatorTest {
 
     @Test
     fun `when try to get same type instance, then the gets will be same`() {
-        SesacServiceLocator.setSingleton(HomeScreen())
+        SesacServiceLocator.registerSingleton(HomeScreen())
 
         val h1 = SesacServiceLocator.get<HomeScreen>()
         val h2 = SesacServiceLocator.get<HomeScreen>()
