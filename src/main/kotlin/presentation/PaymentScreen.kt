@@ -27,6 +27,7 @@ class PaymentScreen(
         if (orderList.isEmpty()) {
             println("결제할 주문이 없습니다")
             ConsoleController.currentScreen = HomeScreen()
+            return
         }
 
         println("결제할 주문 번호: ")

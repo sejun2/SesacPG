@@ -78,7 +78,7 @@ class OrderScreenTest {
         assert(outputStreamCaptor.toString().trimIndent().contains("주문시간:"))
         assert(outputStreamCaptor.toString().trimIndent().contains("결재여부:"))
 
-        assert(res is HomeScreen)
+        assert(ConsoleController.currentScreen is HomeScreen)
     }
 
     @Test
@@ -106,10 +106,5 @@ class OrderScreenTest {
         val res = orderScreen.handleInput()
 
         assert(outputStreamCaptor.toString().trimIndent().contains("메뉴를 올바르게 입력해주세요"))
-    }
-
-    @Test
-    fun `setMenus() test`(){
-
     }
 }

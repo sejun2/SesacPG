@@ -36,36 +36,36 @@ class HomeScreenTest {
     }
 
     @Test
-    fun `when option 1 is selected, then returns OrderScreen()`() {
+    fun `when option 1 is selected, then currentScreen being OrderScreen`() {
         val simulatedInput = "1\n"
         val inputStream = ByteArrayInputStream(simulatedInput.toByteArray())
         System.setIn(inputStream)
 
-        val res = homeScreen.handleInput()
+        homeScreen.handleInput()
 
-        assert(res is OrderScreen)
+        assert(ConsoleController.currentScreen is OrderScreen)
     }
 
     @Test
-    fun `when option 2 is selected, then returns SalesScreen()`() {
+    fun `when option 2 is selected, then currentScreen being SalesScreen()`() {
         val simulatedInput = "2\n"
         val inputStream = ByteArrayInputStream(simulatedInput.toByteArray())
         System.setIn(inputStream)
 
-        val res = homeScreen.handleInput()
+        homeScreen.handleInput()
 
-        assert(res is SalesScreen)
+        assert(ConsoleController.currentScreen is SalesScreen)
     }
 
     @Test
-    fun `when option 3 is selected, then returns PaymentScreen()`() {
+    fun `when option 3 is selected, then currentScreen being PaymentScreen()`() {
         val simulatedInput = "3\n"
         val inputStream = ByteArrayInputStream(simulatedInput.toByteArray())
         System.setIn(inputStream)
 
         val res = homeScreen.handleInput()
 
-        assert(res is PaymentScreen)
+        assert(ConsoleController.currentScreen is PaymentScreen)
     }
 
     @Test
@@ -75,13 +75,11 @@ class HomeScreenTest {
         val inputStream = ByteArrayInputStream(simulatedInput.toByteArray())
         System.setIn(inputStream)
 
-        val res = homeScreen.handleInput()
-
-        assert(res is PaymentScreen)
+        homeScreen.handleInput()
     }
 
     @Test
-    fun `when unsupported option is selected, then print '잘못된 선택' and return null`() {
+    fun `when unsupported option is selected, then print '잘못된 선택'`() {
         val simulatedInput = "NOOPTION\n"
         val inputStream = ByteArrayInputStream(simulatedInput.toByteArray())
         System.setIn(inputStream)
@@ -89,6 +87,5 @@ class HomeScreenTest {
         val res = homeScreen.handleInput()
 
         assertEquals("잘못된 선택", outputStreamCaptor.toString().trimIndent())
-        assert(res == null)
     }
 }

@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3565c664-36c8-4bcf-9728-9ffb80d0cc42" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/BaseScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/BaseScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/ConsoleController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/ConsoleController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/HomeScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/OrderScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/OrderScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/PaymentScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/PaymentScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/HomeScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/HomeScreenTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/OrderScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/OrderScreenTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/PaymentScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/PaymentScreenTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/SalesScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/SalesScreenTest.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -86,6 +86,7 @@
     "Gradle.OrderScreenTest.order success test.executor": "Run",
     "Gradle.OrderScreenTest.when test.executor": "Run",
     "Gradle.PaymentScreenTest.executor": "Run",
+    "Gradle.PaymentScreenTest.handleInput test, when unpaid order is empty, then prints 'empty order error message' and currentScreen being HomeScreen.executor": "Run",
     "Gradle.PaymentScreenTest.handleInput test, when unpaid order is not empty, payment is unsuccessful, then do not prints payment success message and returns null.executor": "Run",
     "Gradle.PaymentScreenTest.handleInput test, when unpaid order is not empty, then .executor": "Run",
     "Gradle.SalesScreenTest.display test.executor": "Run",
@@ -135,7 +136,55 @@
       <recent name="data.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'SesacPG.test'">
+  <component name="RunManager" selected="Gradle.PaymentScreenTest">
+    <configuration name="HomeScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;presentation.HomeScreenTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="OrderScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;presentation.OrderScreenTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
     <configuration name="PaymentScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -160,7 +209,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PaymentScreenTest.handleInput test, when unpaid order is not empty, payment is unsuccessful, then do not prints payment success message and returns null" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="PaymentScreenTest.handleInput test, when unpaid order is empty, then prints 'empty order error message' and currentScreen being HomeScreen" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -173,55 +222,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;presentation.PaymentScreenTest.handleInput test, when unpaid order is not empty, payment is unsuccessful, then do not prints payment success message and returns null&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="PaymentScreenTest.handleInput test, when unpaid order is not empty, then " type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;presentation.PaymentScreenTest.handleInput test, when unpaid order is not empty, then &quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="SalesScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;presentation.SalesScreenTest&quot;" />
+            <option value="&quot;presentation.PaymentScreenTest.handleInput test, when unpaid order is empty, then prints 'empty order error message' and currentScreen being HomeScreen&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -256,11 +257,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'SesacPG.test'" />
         <item itemvalue="Gradle.PaymentScreenTest" />
-        <item itemvalue="Gradle.PaymentScreenTest.handleInput test, when unpaid order is not empty, payment is unsuccessful, then do not prints payment success message and returns null" />
-        <item itemvalue="Gradle.PaymentScreenTest.handleInput test, when unpaid order is not empty, then " />
-        <item itemvalue="Gradle.SalesScreenTest" />
+        <item itemvalue="Gradle.PaymentScreenTest.handleInput test, when unpaid order is empty, then prints 'empty order error message' and currentScreen being HomeScreen" />
+        <item itemvalue="Gradle.Tests in 'SesacPG.test'" />
+        <item itemvalue="Gradle.OrderScreenTest" />
+        <item itemvalue="Gradle.HomeScreenTest" />
       </list>
     </recent_temporary>
   </component>

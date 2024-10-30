@@ -94,17 +94,17 @@ class PaymentScreenTest {
     }
 
     @Test
-    fun `handleInput test, when unpaid order is empty, then prints 'empty order error message' and returns HomeScreen`() {
+    fun `handleInput test, when unpaid order is empty, then prints 'empty order error message' and currentScreen being HomeScreen`() {
         every { mockPaymenViewModel.getUnpaidOrder() } returns emptyList()
 
-        val res = paymentScreen.handleInput()
+        paymentScreen.handleInput()
 
         assert(outputStreamCaptor.toString().trimIndent().contains("결제할 주문이 없습니다"))
-        assert(res is HomeScreen)
+        assert(ConsoleController.currentScreen is HomeScreen)
     }
 
     @Test
-    fun `handleInput test, when unpaid order is not empty, payment is successful, then prints payment success message and returns null`() {
+    fun `handleInput test, when unpaid order is not empty, payment is successful, then prints payment success message`() {
         every { mockPaymenViewModel.getUnpaidOrder() } returns listOf(
             unpaidOrder1, unpaidOrder2
         )
@@ -124,11 +124,10 @@ class PaymentScreenTest {
 
         assert(outputStreamCaptor.toString().trimIndent().contains("결제할 주문 번호: "))
         assert(outputStreamCaptor.toString().trimIndent().contains("결제 완료"))
-        assert(res == null)
     }
 
     @Test
-    fun `handleInput test, when unpaid order is not empty, payment is unsuccessful, then do not prints payment success message and returns null`() {
+    fun `handleInput test, when unpaid order is not empty, payment is unsuccessful, then do not prints payment success message`() {
         every { mockPaymenViewModel.getUnpaidOrder() } returns listOf(
             unpaidOrder1, unpaidOrder2
         )
@@ -148,6 +147,5 @@ class PaymentScreenTest {
 
         assert(outputStreamCaptor.toString().trimIndent().contains("결제할 주문 번호: "))
         assert(!outputStreamCaptor.toString().trimIndent().contains("결제 완료"))
-        assert(res == null)
     }
 }

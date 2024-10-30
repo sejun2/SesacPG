@@ -51,19 +51,19 @@ class SalesScreenTest {
     }
 
     @Test
-    fun `when option 0 is selected, then returns HomeScreen`() {
+    fun `when option 0 is selected, then currentScreen being HomeScreen`() {
         val simulatedInput = "0"
         val inputStream = ByteArrayInputStream(simulatedInput.toByteArray())
 
         System.setIn(inputStream)
 
-        val res = salesScreen.handleInput()
+        salesScreen.handleInput()
 
-        assert(res is HomeScreen)
+        assert(ConsoleController.currentScreen is HomeScreen)
     }
 
     @Test
-    fun `when option 1 is selected and select correct table number, then print sales for table and returns null`() {
+    fun `when option 1 is selected and select correct table number, then print sales for table`() {
         // mock viewModel behaviour
         every { mockSalesViewModel.getSalesForTable(any()) } returns 15000
 
@@ -80,11 +80,10 @@ class SalesScreenTest {
         assert(outputStreamCaptor.toString().trimIndent().contains("테이블 별 매출"))
         assert(outputStreamCaptor.toString().trimIndent().contains("테이블을 선택하세요 : 1~7"))
         assert(outputStreamCaptor.toString().trimIndent().contains("15000"))
-        assert(res == null)
     }
 
     @Test
-    fun `when option 1 is selected and select incorrect table number, then print error message and returns null`() {
+    fun `when option 1 is selected and select incorrect table number, then print error message`() {
         // mock viewModel behaviour
         every { mockSalesViewModel.getSalesForTable(any()) } returns 15000
 
@@ -101,11 +100,10 @@ class SalesScreenTest {
         assert(outputStreamCaptor.toString().trimIndent().contains("테이블 별 매출"))
         assert(outputStreamCaptor.toString().trimIndent().contains("테이블을 선택하세요 : 1~7"))
         assert(outputStreamCaptor.toString().trimIndent().contains("올바른 테이블 번호를 선택해주세요"))
-        assert(res == null)
     }
 
     @Test
-    fun `when option 2 is selected, then print sales for menu and returns null`() {
+    fun `when option 2 is selected, then print sales for menu`() {
         // mock viewModel behaviour
         every { mockSalesViewModel.getSalesForMenu(any()) } returns 50000
 
@@ -122,11 +120,10 @@ class SalesScreenTest {
         assert(outputStreamCaptor.toString().trimIndent().contains("메뉴 별 매출"))
         assert(outputStreamCaptor.toString().trimIndent().contains("메뉴를 입력하세요: 김치찌개, 돈까스, 된장찌개, 순두부찌개, 비빔밥"))
         assert(outputStreamCaptor.toString().trimIndent().contains("50000"))
-        assert(res == null)
     }
 
     @Test
-    fun `when options 3 is selected, then print whole sales and returns null`() {
+    fun `when options 3 is selected, then print whole sales`() {
         // mock viewModel behaviour
         every { mockSalesViewModel.getWholeSales() } returns 1600000
 
@@ -142,11 +139,10 @@ class SalesScreenTest {
 
         assert(outputStreamCaptor.toString().trimIndent().contains("총 매출"))
         assert(outputStreamCaptor.toString().trimIndent().contains("1600000"))
-        assert(res == null)
     }
 
     @Test
-    fun `when options 4 is selected, then print unpaid order list and returns null`() {
+    fun `when options 4 is selected, then print unpaid order list`() {
         val order1 =
             Order(
                 id = 101,
@@ -191,11 +187,10 @@ class SalesScreenTest {
         assert(outputStreamCaptor.toString().trimIndent().contains("계산 안된 테이블 리스트 출력"))
         assert(outputStreamCaptor.toString().trimIndent().contains("${order1.toPrettyString()}"))
         assert(outputStreamCaptor.toString().trimIndent().contains("${order2.toPrettyString()}"))
-        assert(res == null)
     }
 
     @Test
-    fun `when select unsupported option, then prints error message and returns null`() {
+    fun `when select unsupported option, then prints error message`() {
         val simulatedInput = """
             59
         """.trimIndent()
@@ -206,6 +201,5 @@ class SalesScreenTest {
         val res = salesScreen.handleInput()
 
         assert(outputStreamCaptor.toString().trimIndent().contains("잘못된 선택"))
-        assert(res == null)
     }
 }
