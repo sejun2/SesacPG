@@ -17,7 +17,7 @@ class OrderScreen(
         println("주문하기")
     }
 
-    override fun handleInput(): BaseScreen {
+    override fun handleInput() {
         try {
             println("테이블 번호: 1~7")
             val tableNumber = readlnOrNull()?.toInt()
@@ -36,7 +36,7 @@ class OrderScreen(
         } catch (e: Exception) {
             println(e.message)
         } finally {
-            return HomeScreen()
+            ConsoleController.currentScreen = HomeScreen()
         }
     }
 

@@ -18,11 +18,11 @@ class SalesScreen(
         println("1.테이블 별 매출 2.메뉴 별 매출 3.총 매출 4.계산 안된 테이블 리스트 출력 0.메인콘솔")
     }
 
-    override fun handleInput(): BaseScreen? {
-        return when (readlnOrNull() ?: "n") {
+    override fun handleInput() {
+        when (readlnOrNull() ?: "n") {
             "0" -> {
                 println("메인콘솔")
-                HomeScreen()
+                ConsoleController.currentScreen = HomeScreen()
             }
 
             "1" -> {
@@ -36,10 +36,8 @@ class SalesScreen(
 
                     val res = salesViewModel.getSalesForTable(tableNumber)
                     println(res)
-                    return null
                 } catch (e: Exception) {
                     println(e.message)
-                    return null
                 }
             }
 
@@ -52,27 +50,22 @@ class SalesScreen(
                     val res = salesViewModel.getSalesForMenu(sesacMenu = menu)
                     println(res)
                 }
-
-                null
             }
 
             "3" -> {
                 println("총 매출")
                 val res = salesViewModel.getWholeSales()
                 println(res)
-                null
             }
 
             "4" -> {
                 println("계산 안된 테이블 리스트 출력")
                 val res = salesViewModel.getUnpaidTables()
                 println(res.toPrettyString())
-                null
             }
 
             else -> {
                 println("잘못된 선택")
-                null
             }
         }
     }

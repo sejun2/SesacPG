@@ -7,33 +7,15 @@ import presentation.viewmodel.OrderViewModel
 class ConsoleController(
 ) {
 
-    var currentScreen: BaseScreen = HomeScreen()
-
-    fun start() {
-
-        //TODO("Satoshi"): returns of handleInput can be types instead of real Instances
-        //TODO: or make screens as Singleton
-        while (true) {
-            currentScreen.display()
-            when (currentScreen.handleInput()) {
-                null -> continue
-                is SalesScreen -> {
-                    currentScreen = SalesScreen()
-                }
-
-                is HomeScreen -> {
-                    currentScreen = HomeScreen()
-                }
-
-                is OrderScreen -> {
-                    currentScreen = OrderScreen()
-                }
-
-                is PaymentScreen -> {
-                    currentScreen = PaymentScreen()
-                }
-            }
-        }
+    companion object{
+        @JvmStatic
+        var currentScreen: BaseScreen = HomeScreen()
     }
 
+    fun start() {
+        while (true) {
+            currentScreen.display()
+            currentScreen.handleInput()
+        }
+    }
 }

@@ -21,12 +21,12 @@ class PaymentScreen(
         println(viewModel.getUnpaidOrder().toPrettyString())
     }
 
-    override fun handleInput(): BaseScreen? {
+    override fun handleInput() {
         val orderList = viewModel.getUnpaidOrder()
 
         if (orderList.isEmpty()) {
             println("결제할 주문이 없습니다")
-            return HomeScreen()
+            ConsoleController.currentScreen = HomeScreen()
         }
 
         println("결제할 주문 번호: ")
@@ -40,7 +40,5 @@ class PaymentScreen(
             val res = viewModel.payment(it)
             println("결제 완료\n${res.toPrettyString()}")
         }
-
-        return null
     }
 }
