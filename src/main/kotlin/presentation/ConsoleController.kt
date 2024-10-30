@@ -1,15 +1,13 @@
 package presentation
 
-import data.datasource.SesacOrderDataSource
-import data.repository.SesacRestaurantOrderRepositoryImpl
-import presentation.viewmodel.OrderViewModel
+import di.SesacServiceLocator
 
 class ConsoleController(
 ) {
 
-    companion object{
+    companion object {
         @JvmStatic
-        var currentScreen: BaseScreen = HomeScreen()
+        var currentScreen: BaseScreen = SesacServiceLocator.get<HomeScreen>()
     }
 
     fun start() {
