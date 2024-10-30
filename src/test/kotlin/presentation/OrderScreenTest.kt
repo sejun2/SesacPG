@@ -1,5 +1,7 @@
 package presentation
 
+import di.DIProvider
+import di.SesacServiceLocator
 import domain.model.Order
 import domain.model.SesacMenu
 import io.mockk.clearMocks
@@ -26,6 +28,7 @@ class OrderScreenTest {
 
     @BeforeEach
     fun setUp() {
+        DIProvider.provide()
         orderScreen = OrderScreen(mockOrderViewModel)
         System.setOut(PrintStream(outputStreamCaptor))
     }
@@ -34,6 +37,7 @@ class OrderScreenTest {
     fun tearDown() {
         System.setOut(standardOut)
         System.setIn(standardIn)
+        SesacServiceLocator.clearDi()
     }
 
     @Test

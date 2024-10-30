@@ -1,5 +1,7 @@
 package presentation
 
+import di.DIProvider
+import di.SesacServiceLocator
 import domain.model.Order
 import domain.model.SesacMenu
 import domain.model.toPrettyString
@@ -27,6 +29,7 @@ class SalesScreenTest {
 
     @BeforeEach
     fun setUp() {
+        DIProvider.provide()
         mockSalesViewModel = mockk<SalesViewModel>()
         salesScreen = SalesScreen(mockSalesViewModel)
 
@@ -38,6 +41,7 @@ class SalesScreenTest {
         System.setOut(standardOut)
         System.setIn(standardIn)
         clearMocks(mockSalesViewModel)
+        SesacServiceLocator.clearDi()
     }
 
     @Test

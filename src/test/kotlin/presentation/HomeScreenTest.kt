@@ -1,5 +1,7 @@
 package presentation
 
+import di.DIProvider
+import di.SesacServiceLocator
 import org.junit.jupiter.api.AfterEach
 import org.junit.jupiter.api.Assertions.assertEquals
 import org.junit.jupiter.api.Test
@@ -9,6 +11,7 @@ import org.junit.jupiter.api.Disabled
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
+import java.security.Provider.Service
 
 class HomeScreenTest {
 
@@ -21,12 +24,14 @@ class HomeScreenTest {
     @BeforeEach
     fun setUp() {
         System.setOut(PrintStream(outputStreamCaptor))
+        DIProvider.provide()
     }
 
     @AfterEach
     fun tearDown() {
         System.setOut(standardOut)
         System.setIn(standardIn)
+        SesacServiceLocator.clearDi()
     }
 
     @Test

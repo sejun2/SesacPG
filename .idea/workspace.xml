@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3565c664-36c8-4bcf-9728-9ffb80d0cc42" name="Changes" comment="" />
+    <list default="true" id="3565c664-36c8-4bcf-9728-9ffb80d0cc42" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/di/DIProvider.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MainApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/di/SesacServiceLocator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/di/SesacServiceLocator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/HomeScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/HomeScreenTest.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,8 +34,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Kotlin Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -131,7 +137,7 @@
       <recent name="data.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.SesacServiceLocatorTest">
+  <component name="RunManager" selected="Gradle.Tests in 'SesacPG.test'">
     <configuration name="PaymentScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -235,10 +241,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.Tests in 'SesacPG.test'" />
         <item itemvalue="Gradle.SesacServiceLocatorTest" />
         <item itemvalue="Kotlin.MainApplicationKt" />
         <item itemvalue="Gradle.UtilFunKtTest" />
-        <item itemvalue="Gradle.Tests in 'SesacPG.test'" />
         <item itemvalue="Gradle.PaymentScreenTest" />
       </list>
     </recent_temporary>

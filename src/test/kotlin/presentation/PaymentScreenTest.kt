@@ -1,5 +1,7 @@
 package presentation
 
+import di.DIProvider
+import di.SesacServiceLocator
 import domain.model.Order
 import domain.model.SesacMenu
 import domain.model.toPrettyString
@@ -54,6 +56,7 @@ class PaymentScreenTest {
 
     @BeforeEach
     fun setUp() {
+        DIProvider.provide()
         mockPaymenViewModel = mockk<PaymentViewModel>()
         paymentScreen = PaymentScreen(mockPaymenViewModel)
 
@@ -65,6 +68,7 @@ class PaymentScreenTest {
         System.setOut(standardOut)
         System.setIn(standardIn)
         clearMocks(mockPaymenViewModel)
+        SesacServiceLocator.clearDi()
     }
 
     @Test
