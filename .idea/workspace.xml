@@ -5,12 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3565c664-36c8-4bcf-9728-9ffb80d0cc42" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/kotlin/di/SesacServiceLocatorTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MainApplication.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/di/SesacServiceLocator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/di/SesacServiceLocator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/HomeScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/OrderScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/OrderScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/PaymentScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/PaymentScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/HomeScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/HomeScreenTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/OrderScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/OrderScreenTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/PaymentScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/PaymentScreenTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/SalesScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/SalesScreenTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/SalesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/SalesScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/FileManager.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/utils/RestaurantManager.kt" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +105,7 @@
     "Gradle.SesacRestaurantPaymentRepositoryImplTest.paymentTest.executor": "Run",
     "Gradle.SesacRestaurantSalesRepositoryImplTest.executor": "Run",
     "Gradle.SesacRestaurantSalesRepositoryImplTest.getSalesForMenu.executor": "Run",
+    "Gradle.SesacServiceLocatorTest.executor": "Run",
     "Gradle.Tests in 'SesacPG.test'.executor": "Run",
     "Gradle.Tests in 'data.repository'.executor": "Run",
     "Gradle.UtilFunKtTest.executor": "Run",
@@ -131,60 +136,13 @@
       <recent name="" />
     </key>
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="di" />
       <recent name="presentation" />
       <recent name="utils" />
       <recent name="data.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.PaymentScreenTest">
-    <configuration name="HomeScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;presentation.HomeScreenTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="OrderScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;presentation.OrderScreenTest&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Gradle.SesacServiceLocatorTest">
     <configuration name="PaymentScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -209,7 +167,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="PaymentScreenTest.handleInput test, when unpaid order is empty, then prints 'empty order error message' and currentScreen being HomeScreen" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SesacServiceLocatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -222,7 +180,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;presentation.PaymentScreenTest.handleInput test, when unpaid order is empty, then prints 'empty order error message' and currentScreen being HomeScreen&quot;" />
+            <option value="&quot;di.SesacServiceLocatorTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -255,13 +213,44 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+    <configuration name="UtilFunKtTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;utils.UtilFunKtTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="MainApplicationKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainApplicationKt" />
+      <module name="SesacPG.main" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.PaymentScreenTest" />
-        <item itemvalue="Gradle.PaymentScreenTest.handleInput test, when unpaid order is empty, then prints 'empty order error message' and currentScreen being HomeScreen" />
+        <item itemvalue="Gradle.SesacServiceLocatorTest" />
+        <item itemvalue="Kotlin.MainApplicationKt" />
+        <item itemvalue="Gradle.UtilFunKtTest" />
         <item itemvalue="Gradle.Tests in 'SesacPG.test'" />
-        <item itemvalue="Gradle.OrderScreenTest" />
-        <item itemvalue="Gradle.HomeScreenTest" />
+        <item itemvalue="Gradle.PaymentScreenTest" />
       </list>
     </recent_temporary>
   </component>

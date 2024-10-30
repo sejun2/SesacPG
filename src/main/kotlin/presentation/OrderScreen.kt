@@ -2,6 +2,7 @@ package presentation
 
 import data.datasource.SesacOrderDataSource
 import data.repository.SesacRestaurantOrderRepositoryImpl
+import di.SesacServiceLocator
 import domain.model.toPrettyString
 import presentation.viewmodel.OrderViewModel
 import utils.setMenus
@@ -36,7 +37,7 @@ class OrderScreen(
         } catch (e: Exception) {
             println(e.message)
         } finally {
-            ConsoleController.currentScreen = HomeScreen()
+            ConsoleController.currentScreen = SesacServiceLocator.get<HomeScreen>()
         }
     }
 

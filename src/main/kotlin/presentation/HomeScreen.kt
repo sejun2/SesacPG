@@ -1,5 +1,6 @@
 package presentation
 
+import di.SesacServiceLocator
 import kotlin.system.exitProcess
 
 class HomeScreen : BaseScreen {
@@ -10,15 +11,15 @@ class HomeScreen : BaseScreen {
     override fun handleInput() {
         when (readlnOrNull() ?: "n") {
             "1" -> {
-                ConsoleController.currentScreen = OrderScreen()
+                ConsoleController.currentScreen = SesacServiceLocator.get<OrderScreen>()
             }
 
             "2" -> {
-                ConsoleController.currentScreen = SalesScreen()
+                ConsoleController.currentScreen = SesacServiceLocator.get<SalesScreen>()
             }
 
             "3" -> {
-                ConsoleController.currentScreen = PaymentScreen()
+                ConsoleController.currentScreen = SesacServiceLocator.get<PaymentScreen>()
             }
 
             "0" -> {

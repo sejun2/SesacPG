@@ -3,6 +3,7 @@ package presentation
 import data.datasource.SesacOrderDataSource
 import data.repository.SesacRestaurantPaymentRepositoryImpl
 import data.repository.SesacRestaurantSalesRepositoryImpl
+import di.SesacServiceLocator
 import domain.model.toPrettyString
 import presentation.viewmodel.PaymentViewModel
 
@@ -26,7 +27,7 @@ class PaymentScreen(
 
         if (orderList.isEmpty()) {
             println("결제할 주문이 없습니다")
-            ConsoleController.currentScreen = HomeScreen()
+            ConsoleController.currentScreen = SesacServiceLocator.get<HomeScreen>()
             return
         }
 

@@ -2,6 +2,7 @@ package presentation
 
 import data.datasource.SesacOrderDataSource
 import data.repository.SesacRestaurantSalesRepositoryImpl
+import di.SesacServiceLocator
 import domain.model.SesacMenu
 import domain.model.toPrettyString
 import presentation.viewmodel.SalesViewModel
@@ -22,7 +23,7 @@ class SalesScreen(
         when (readlnOrNull() ?: "n") {
             "0" -> {
                 println("메인콘솔")
-                ConsoleController.currentScreen = HomeScreen()
+                ConsoleController.currentScreen = SesacServiceLocator.get<HomeScreen>()
             }
 
             "1" -> {
