@@ -6,6 +6,7 @@ import domain.model.Order
 import domain.model.SesacMenu
 import domain.repository.ISesacRestaurantOrderRepository
 import domain.repository.ISesacRestaurantSalesRepository
+import io.mockk.clearMocks
 import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk
@@ -80,6 +81,48 @@ class SesacRestaurantOrderRepositoryImplTest {
         }
     }
 
+    @BeforeEach
+    fun beforeEach(){
+        every { sesacOrderDataSource.getOrder() } returns orderListJson
+        every { sesacOrderDataSource.saveOrder(any()) } returns true
+    }
+
+
+    @Test
+    fun `given empty order, when new order, then returns new order`(){
+        every { sesacOrderDataSource.getOrder() } returns ""
+
+        val expect = Order(
+            id = 1,
+            tableNumber = 55,
+            orderedTime = System.currentTimeMillis(),
+            paidTime = null,
+            price = hashMapOf(
+                SesacMenu.BIBIMBAP to 5,
+                SesacMenu.DON_KATSU to 5
+            ).getWholePrice(),
+            paid = false,
+            menus = hashMapOf(
+                SesacMenu.BIBIMBAP to 5,
+                SesacMenu.DON_KATSU to 5
+            )
+        )
+
+        val res = repository.order(
+            tableNumber = 55,
+            menus = hashMapOf(
+                SesacMenu.BIBIMBAP to 5,
+                SesacMenu.DON_KATSU to 5
+            )
+        )
+
+        kotlin.test.assertEquals(expect.id, res.id)
+        kotlin.test.assertEquals(expect.tableNumber, res.tableNumber)
+        kotlin.test.assertEquals(expect.paidTime, res.paidTime)
+        kotlin.test.assertEquals(expect.paid, res.paid)
+        kotlin.test.assertEquals(expect.price, res.price)
+        kotlin.test.assertEquals(expect.menus, res.menus)
+    }
 
     @Test
     fun `when new order, then returns new order`() {
