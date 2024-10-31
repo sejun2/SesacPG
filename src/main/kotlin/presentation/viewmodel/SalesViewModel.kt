@@ -1,16 +1,37 @@
 package presentation.viewmodel
 
+import domain.model.Order
 import domain.model.SesacMenu
 import domain.repository.ISesacRestaurantSalesRepository
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.async
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 class SalesViewModel(private val salesRepository: ISesacRestaurantSalesRepository) {
 
-    fun getWholeSales() =
-        salesRepository.getWholeSales()
+    suspend fun getWholeSales(): Int {
+        return withContext(Dispatchers.IO) {
+            return@withContext salesRepository.getWholeSales()
+        }
+    }
 
-    fun getSalesForMenu(sesacMenu: SesacMenu) = salesRepository.getSalesForMenu(sesacMenu)
+    suspend fun getSalesForMenu(sesacMenu: SesacMenu): Int {
+        return withContext(Dispatchers.IO) {
+            return@withContext salesRepository.getSalesForMenu(sesacMenu)
+        }
+    }
 
-    fun getSalesForTable(tableNumber: Int) = salesRepository.getSalesForTable(tableNumber)
+    suspend fun getSalesForTable(tableNumber: Int): Int {
+        return withContext(Dispatchers.IO) {
+            return@withContext salesRepository.getSalesForTable(tableNumber)
+        }
+    }
 
-    fun getUnpaidTables() = salesRepository.getUnpaidOrder()
+    suspend fun getUnpaidTables(): List<Order> {
+        return withContext(Dispatchers.IO) {
+            return@withContext salesRepository.getUnpaidOrder()
+        }
+    }
 }

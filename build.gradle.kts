@@ -13,6 +13,10 @@ dependencies {
     testImplementation(kotlin("test"))
     implementation("com.google.code.gson:gson:2.11.0")
     testImplementation("io.mockk:mockk:1.13.13")
+<<<<<<< Updated upstream
+=======
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.9.0")
+>>>>>>> Stashed changes
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
 }
 

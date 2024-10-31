@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3565c664-36c8-4bcf-9728-9ffb80d0cc42" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/datasource/SesacOrderDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/datasource/SesacOrderDataSource.kt" afterDir="false" />
@@ -12,6 +13,16 @@
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/domain/repository/ISesacRestaurantPaymentRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/domain/repository/ISesacRestaurantPaymentRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/PaymentScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/PaymentScreen.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/viewmodel/PaymentViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/viewmodel/PaymentViewModel.kt" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pg_db" beforeDir="false" afterPath="$PROJECT_DIR$/pg_db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/data/datasource/SesacOrderDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/data/datasource/SesacOrderDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/SalesScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/SalesScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/viewmodel/SalesViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/viewmodel/SalesViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/SalesScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/SalesScreenTest.kt" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,10 +66,17 @@
     "url": "https://github.com/sejun2/SesacPG.git",
     "accountId": "db2936fb-c9d9-4e5c-aa24-05027cbad7ae"
   }
+<<<<<<< Updated upstream
 }]]></component>
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 6
 }]]></component>
+=======
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+>>>>>>> Stashed changes
   <component name="ProjectId" id="2nsmKw566A9IrzQR9RQUycRNPue" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -71,6 +89,30 @@
     "Gradle.GsonTest.executor": "Run",
     "Gradle.GsonTest.fromJsonTest.executor": "Debug",
     "Gradle.GsonTest.toJsonTest.executor": "Run",
+<<<<<<< Updated upstream
+=======
+    "Gradle.HomeScreenTest.display correct options.executor": "Run",
+    "Gradle.HomeScreenTest.executor": "Run",
+    "Gradle.HomeScreenTest.handleInput.executor": "Run",
+    "Gradle.HomeScreenTest.when option 0 is selected, then exit process.executor": "Run",
+    "Gradle.HomeScreenTest.when unsupported option is selected, then print '잘못된 선택'.executor": "Run",
+    "Gradle.OrderScreenTest.display.executor": "Run",
+    "Gradle.OrderScreenTest.executor": "Run",
+    "Gradle.OrderScreenTest.order fail test, when input out ranged table number, then it says error message.executor": "Run",
+    "Gradle.OrderScreenTest.order fail test, when input wrong menu string, then it says error message.executor": "Run",
+    "Gradle.OrderScreenTest.order success test.executor": "Run",
+    "Gradle.OrderScreenTest.when test.executor": "Run",
+    "Gradle.PaymentScreenTest.executor": "Run",
+    "Gradle.PaymentScreenTest.handleInput test, when unpaid order is empty, then prints 'empty order error message' and currentScreen being HomeScreen.executor": "Run",
+    "Gradle.PaymentScreenTest.handleInput test, when unpaid order is not empty, payment is unsuccessful, then do not prints payment success message and returns null.executor": "Run",
+    "Gradle.PaymentScreenTest.handleInput test, when unpaid order is not empty, then .executor": "Run",
+    "Gradle.SalesScreenTest.display test.executor": "Run",
+    "Gradle.SalesScreenTest.executor": "Run",
+    "Gradle.SalesScreenTest.when option 0 is selected, then returns HomeScreen.executor": "Run",
+    "Gradle.SalesScreenTest.when option 1 is selected and select correct table number, then print sales for table.executor": "Run",
+    "Gradle.SalesScreenTest.when option 1 is selected, then returns HomeScreen.executor": "Run",
+    "Gradle.SalesScreenTest.when option 2 is selected, then print sales for menu and returns null.executor": "Run",
+>>>>>>> Stashed changes
     "Gradle.SesacRestaurantOrderRepositoryImplTest.executor": "Run",
     "Gradle.SesacRestaurantOrderRepositoryImplTest.orderTest.executor": "Run",
     "Gradle.SesacRestaurantOrderRepositoryImplTest.when additional order for existing, then returns added order.executor": "Run",
@@ -86,7 +128,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "git-widget-placeholder": "refactor/coroutines",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/imsejun/SesacProjects/SesacPG/src/main/kotlin",
+    "last_opened_file_path": "/Users/imsejun/SesacProjects/SesacPG",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2"
@@ -103,8 +145,13 @@
       <recent name="data.repository" />
     </key>
   </component>
+<<<<<<< Updated upstream
   <component name="RunManager" selected="Gradle.Tests in 'data.repository'">
     <configuration name="SesacRestaurantOrderRepositoryImplTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+=======
+  <component name="RunManager" selected="Gradle.Tests in 'SesacPG.test'">
+    <configuration name="OrderScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+>>>>>>> Stashed changes
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -117,7 +164,11 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
+<<<<<<< Updated upstream
             <option value="&quot;data.repository.SesacRestaurantOrderRepositoryImplTest&quot;" />
+=======
+            <option value="&quot;presentation.OrderScreenTest&quot;" />
+>>>>>>> Stashed changes
           </list>
         </option>
         <option name="vmOptions" />
@@ -128,7 +179,11 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
+<<<<<<< Updated upstream
     <configuration name="SesacRestaurantOrderRepositoryImplTest.when additional order for existing, then returns added order" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+=======
+    <configuration name="SalesScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+>>>>>>> Stashed changes
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -141,7 +196,10 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
+<<<<<<< Updated upstream
             <option value="&quot;data.repository.SesacRestaurantOrderRepositoryImplTest.when additional order for existing, then returns added order&quot;" />
+=======
+            <option value="&quot;presentation.SalesScreenTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -152,7 +210,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SesacRestaurantPaymentRepositoryImplTest.paymentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SalesScreenTest.when option 1 is selected and select correct table number, then print sales for table" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -164,6 +222,36 @@
         <option name="taskNames">
           <list>
             <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;presentation.SalesScreenTest.when option 1 is selected and select correct table number, then print sales for table&quot;" />
+>>>>>>> Stashed changes
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+<<<<<<< Updated upstream
+    <configuration name="SesacRestaurantPaymentRepositoryImplTest.paymentTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+=======
+    <configuration name="Tests in 'SesacPG.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+>>>>>>> Stashed changes
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+<<<<<<< Updated upstream
             <option value="--tests" />
             <option value="&quot;data.repository.SesacRestaurantPaymentRepositoryImplTest.paymentTest&quot;" />
           </list>
@@ -190,6 +278,8 @@
             <option value=":test" />
             <option value="--tests" />
             <option value="&quot;data.repository.*&quot;" />
+=======
+>>>>>>> Stashed changes
           </list>
         </option>
         <option name="vmOptions" />
@@ -209,11 +299,19 @@
     </configuration>
     <recent_temporary>
       <list>
+<<<<<<< Updated upstream
         <item itemvalue="Gradle.Tests in 'data.repository'" />
         <item itemvalue="Kotlin.MainApplicationKt" />
         <item itemvalue="Gradle.SesacRestaurantPaymentRepositoryImplTest.paymentTest" />
         <item itemvalue="Gradle.SesacRestaurantOrderRepositoryImplTest" />
         <item itemvalue="Gradle.SesacRestaurantOrderRepositoryImplTest.when additional order for existing, then returns added order" />
+=======
+        <item itemvalue="Gradle.Tests in 'SesacPG.test'" />
+        <item itemvalue="Gradle.SalesScreenTest.when option 1 is selected and select correct table number, then print sales for table" />
+        <item itemvalue="Gradle.SalesScreenTest" />
+        <item itemvalue="Kotlin.MainApplicationKt" />
+        <item itemvalue="Gradle.OrderScreenTest" />
+>>>>>>> Stashed changes
       </list>
     </recent_temporary>
   </component>
