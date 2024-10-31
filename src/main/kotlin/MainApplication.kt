@@ -11,3 +11,4 @@ class MainApplication {
 fun main(args: Array<String>) {
     MainApplication().run()
 }
+//TODO: runCatching, coroutines mig

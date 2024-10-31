@@ -1,4 +1,3 @@
-package presentation
 
 interface BaseScreen {
     fun display()

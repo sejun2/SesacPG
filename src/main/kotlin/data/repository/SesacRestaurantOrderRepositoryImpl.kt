@@ -22,7 +22,8 @@ class SesacRestaurantOrderRepositoryImpl(private val sesacOrderDataSource: Sesac
         val allOrderList = Gson().fromJson<ArrayList<OrderDTO>>(
             orderListJson,
             object : TypeToken<List<OrderDTO>>() {}.type
-        )
+        ) ?: ArrayList<OrderDTO>()
+
         val existingOrder = allOrderList.lastOrNull { !it.paid && it.tableNumber == tableNumber }
 
         //TODO("Satoshi"): separate additional order and new order
@@ -44,7 +45,7 @@ class SesacRestaurantOrderRepositoryImpl(private val sesacOrderDataSource: Sesac
 
             return res.toDomain()
         } else {
-            val lastId = allOrderList.sortedBy {
+            val lastId = if (allOrderList.isEmpty) 0 else allOrderList.sortedBy {
                 it.id
             }.last().id
 
