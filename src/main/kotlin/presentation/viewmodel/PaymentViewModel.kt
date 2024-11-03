@@ -1,19 +1,15 @@
 package presentation.viewmodel
 
 import domain.model.Order
-import domain.repository.ISesacRestaurantPaymentRepository
-import domain.repository.ISesacRestaurantSalesRepository
+import domain.usecase.GetUnpaidOrderUseCase
+import domain.usecase.PaymentUseCase
 
 class PaymentViewModel(
-    private val paymentRepository: ISesacRestaurantPaymentRepository,
-    private val salesRepository: ISesacRestaurantSalesRepository
+    private val paymentUseCase: PaymentUseCase,
+    private val getUnpaidOrderUseCase: GetUnpaidOrderUseCase,
 ) {
 
-    fun getUnpaidOrder() =
-        salesRepository.getUnpaidOrder()
+    fun getUnpaidOrder() = getUnpaidOrderUseCase.invoke()
 
-
-    fun payment(order: Order) =
-        paymentRepository.payment(order)
-
+    fun payment(order: Order) = paymentUseCase.invoke(order)
 }

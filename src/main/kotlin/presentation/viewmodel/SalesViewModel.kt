@@ -1,16 +1,23 @@
 package presentation.viewmodel
 
 import domain.model.SesacMenu
-import domain.repository.ISesacRestaurantSalesRepository
+import domain.usecase.GetSalesForMenuUseCase
+import domain.usecase.GetSalesForTableUseCase
+import domain.usecase.GetUnpaidOrderUseCase
+import domain.usecase.GetWholeSalesUseCase
 
-class SalesViewModel(private val salesRepository: ISesacRestaurantSalesRepository) {
+class SalesViewModel(
+    private val getWholeSalesUseCase: GetWholeSalesUseCase,
+    private val getSalesForMenuUseCase: GetSalesForMenuUseCase,
+    private val getSalesForTableUseCase: GetSalesForTableUseCase,
+    private val getUnpaidOrderUseCase: GetUnpaidOrderUseCase,
+) {
 
-    fun getWholeSales() =
-        salesRepository.getWholeSales()
+    fun getWholeSales() = getWholeSalesUseCase.invoke()
 
-    fun getSalesForMenu(sesacMenu: SesacMenu) = salesRepository.getSalesForMenu(sesacMenu)
+    fun getSalesForMenu(sesacMenu: SesacMenu) = getSalesForMenuUseCase.invoke(sesacMenu)
 
-    fun getSalesForTable(tableNumber: Int) = salesRepository.getSalesForTable(tableNumber)
+    fun getSalesForTable(tableNumber: Int) = getSalesForTableUseCase.invoke(tableNumber)
 
-    fun getUnpaidTables() = salesRepository.getUnpaidOrder()
+    fun getUnpaidTables() = getUnpaidOrderUseCase.invoke()
 }

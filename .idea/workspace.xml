@@ -5,11 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3565c664-36c8-4bcf-9728-9ffb80d0cc42" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/di/DIProvider.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/domain/usecase/GetSalesForTableUseCase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/domain/usecase/GetSalesForeMenuUseCase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/domain/usecase/GetUnpaidOrderUseCase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/domain/usecase/GetWholeSalesUseCase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/domain/usecase/OrderUseCase.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/domain/usecase/PaymentUseCase.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/MainApplication.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/MainApplication.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/di/SesacServiceLocator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/di/SesacServiceLocator.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/presentation/HomeScreenTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/presentation/HomeScreenTest.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pg_db" beforeDir="false" afterPath="$PROJECT_DIR$/pg_db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/viewmodel/OrderViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/viewmodel/OrderViewModel.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/presentation/viewmodel/PaymentViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/presentation/viewmodel/PaymentViewModel.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,11 +60,6 @@
     &quot;accountId&quot;: &quot;db2936fb-c9d9-4e5c-aa24-05027cbad7ae&quot;
   }
 }</component>
-  <component name="JavaAutoRunManager">
-    <enabled-run-configurations>
-      <run-configuration type="GradleRunConfiguration" name="OrderScreenTest" />
-    </enabled-run-configurations>
-  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -68,61 +69,61 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Gradle.Build SesacPG.executor": "Run",
-    "Gradle.GsonTest.executor": "Run",
-    "Gradle.GsonTest.fromJsonTest.executor": "Debug",
-    "Gradle.GsonTest.toJsonTest.executor": "Run",
-    "Gradle.HomeScreenTest.display correct options.executor": "Run",
-    "Gradle.HomeScreenTest.executor": "Run",
-    "Gradle.HomeScreenTest.handleInput.executor": "Run",
-    "Gradle.HomeScreenTest.when option 0 is selected, then exit process.executor": "Run",
-    "Gradle.OrderScreenTest.display.executor": "Run",
-    "Gradle.OrderScreenTest.executor": "Run",
-    "Gradle.OrderScreenTest.order fail test, when input out ranged table number, then it says error message.executor": "Run",
-    "Gradle.OrderScreenTest.order fail test, when input wrong menu string, then it says error message.executor": "Run",
-    "Gradle.OrderScreenTest.order success test.executor": "Run",
-    "Gradle.OrderScreenTest.when test.executor": "Run",
-    "Gradle.PaymentScreenTest.executor": "Run",
-    "Gradle.PaymentScreenTest.handleInput test, when unpaid order is empty, then prints 'empty order error message' and currentScreen being HomeScreen.executor": "Run",
-    "Gradle.PaymentScreenTest.handleInput test, when unpaid order is not empty, payment is unsuccessful, then do not prints payment success message and returns null.executor": "Run",
-    "Gradle.PaymentScreenTest.handleInput test, when unpaid order is not empty, then .executor": "Run",
-    "Gradle.SalesScreenTest.display test.executor": "Run",
-    "Gradle.SalesScreenTest.executor": "Run",
-    "Gradle.SalesScreenTest.when option 0 is selected, then returns HomeScreen.executor": "Run",
-    "Gradle.SalesScreenTest.when option 1 is selected, then returns HomeScreen.executor": "Run",
-    "Gradle.SalesScreenTest.when option 2 is selected, then print sales for menu and returns null.executor": "Run",
-    "Gradle.SesacRestaurantOrderRepositoryImplTest.executor": "Run",
-    "Gradle.SesacRestaurantOrderRepositoryImplTest.orderTest.executor": "Run",
-    "Gradle.SesacRestaurantOrderRepositoryImplTest.when additional order for existing, then returns added order.executor": "Run",
-    "Gradle.SesacRestaurantOrderRepositoryImplTest.when new order, then returns new order.executor": "Run",
-    "Gradle.SesacRestaurantPaymentRepositoryImplTest.paymentTest.executor": "Run",
-    "Gradle.SesacRestaurantSalesRepositoryImplTest.executor": "Run",
-    "Gradle.SesacRestaurantSalesRepositoryImplTest.getSalesForMenu.executor": "Run",
-    "Gradle.SesacServiceLocatorTest.executor": "Run",
-    "Gradle.Tests in 'SesacPG.test'.executor": "Run",
-    "Gradle.Tests in 'data.repository'.executor": "Run",
-    "Gradle.UtilFunKtTest.executor": "Run",
-    "Gradle.UtilFunKtTest.setMenu happy path test1.executor": "Run",
-    "Gradle.UtilFunKtTest.setMenu happy path test2.executor": "Run",
-    "Gradle.UtilFunKtTest.setMenu happy path test3.executor": "Run",
-    "Gradle.UtilFunKtTest.setMenu sad path test1.executor": "Run",
-    "Gradle.UtilFunKtTest.setMenu sad path test2.executor": "Run",
-    "JUnit.OrderScreenTest.executor": "Run",
-    "Kotlin.MainApplicationKt.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/imsejun/SesacProjects/SesacPG/src/main/kotlin",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Gradle.Build SesacPG.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GsonTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.GsonTest.fromJsonTest.executor&quot;: &quot;Debug&quot;,
+    &quot;Gradle.GsonTest.toJsonTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HomeScreenTest.display correct options.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HomeScreenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HomeScreenTest.handleInput.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.HomeScreenTest.when option 0 is selected, then exit process.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderScreenTest.display.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderScreenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderScreenTest.order fail test, when input out ranged table number, then it says error message.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderScreenTest.order fail test, when input wrong menu string, then it says error message.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderScreenTest.order success test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.OrderScreenTest.when test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PaymentScreenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PaymentScreenTest.handleInput test, when unpaid order is empty, then prints 'empty order error message' and currentScreen being HomeScreen.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PaymentScreenTest.handleInput test, when unpaid order is not empty, payment is unsuccessful, then do not prints payment success message and returns null.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.PaymentScreenTest.handleInput test, when unpaid order is not empty, then .executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SalesScreenTest.display test.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SalesScreenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SalesScreenTest.when option 0 is selected, then returns HomeScreen.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SalesScreenTest.when option 1 is selected, then returns HomeScreen.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SalesScreenTest.when option 2 is selected, then print sales for menu and returns null.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SesacRestaurantOrderRepositoryImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SesacRestaurantOrderRepositoryImplTest.orderTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SesacRestaurantOrderRepositoryImplTest.when additional order for existing, then returns added order.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SesacRestaurantOrderRepositoryImplTest.when new order, then returns new order.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SesacRestaurantPaymentRepositoryImplTest.paymentTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SesacRestaurantSalesRepositoryImplTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SesacRestaurantSalesRepositoryImplTest.getSalesForMenu.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.SesacServiceLocatorTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'SesacPG.test'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Tests in 'data.repository'.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UtilFunKtTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UtilFunKtTest.setMenu happy path test1.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UtilFunKtTest.setMenu happy path test2.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UtilFunKtTest.setMenu happy path test3.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UtilFunKtTest.setMenu sad path test1.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.UtilFunKtTest.setMenu sad path test2.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OrderScreenTest.executor&quot;: &quot;Run&quot;,
+    &quot;Kotlin.MainApplicationKt.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/imsejun/SesacProjects/SesacPG/src/main/kotlin&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/kotlin" />
@@ -136,9 +137,12 @@
       <recent name="utils" />
       <recent name="data.repository" />
     </key>
+    <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
+      <recent name="domain.usecase" />
+    </key>
   </component>
-  <component name="RunManager" selected="Gradle.Tests in 'SesacPG.test'">
-    <configuration name="PaymentScreenTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Kotlin.MainApplicationKt">
+    <configuration name="HomeScreenTest.display correct options" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -151,7 +155,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;presentation.PaymentScreenTest&quot;" />
+            <option value="&quot;presentation.HomeScreenTest.display correct options&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -162,7 +166,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="SesacServiceLocatorTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="SesacRestaurantOrderRepositoryImplTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -175,7 +179,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;di.SesacServiceLocatorTest&quot;" />
+            <option value="&quot;data.repository.SesacRestaurantOrderRepositoryImplTest&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -186,29 +190,7 @@
       <RunAsTest>true</RunAsTest>
       <method v="2" />
     </configuration>
-    <configuration name="Tests in 'SesacPG.test'" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <RunAsTest>true</RunAsTest>
-      <method v="2" />
-    </configuration>
-    <configuration name="UtilFunKtTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UtilFunKtTest.setMenu happy path test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -221,7 +203,31 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;utils.UtilFunKtTest&quot;" />
+            <option value="&quot;utils.UtilFunKtTest.setMenu happy path test1&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <RunAsTest>true</RunAsTest>
+      <method v="2" />
+    </configuration>
+    <configuration name="UtilFunKtTest.setMenu sad path test1" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;utils.UtilFunKtTest.setMenu sad path test1&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -241,11 +247,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.Tests in 'SesacPG.test'" />
-        <item itemvalue="Gradle.SesacServiceLocatorTest" />
         <item itemvalue="Kotlin.MainApplicationKt" />
-        <item itemvalue="Gradle.UtilFunKtTest" />
-        <item itemvalue="Gradle.PaymentScreenTest" />
+        <item itemvalue="Gradle.SesacRestaurantOrderRepositoryImplTest" />
+        <item itemvalue="Gradle.UtilFunKtTest.setMenu sad path test1" />
+        <item itemvalue="Gradle.UtilFunKtTest.setMenu happy path test1" />
+        <item itemvalue="Gradle.HomeScreenTest.display correct options" />
       </list>
     </recent_temporary>
   </component>

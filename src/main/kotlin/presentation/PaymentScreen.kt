@@ -8,12 +8,7 @@ import domain.model.toPrettyString
 import presentation.viewmodel.PaymentViewModel
 
 class PaymentScreen(
-    private val viewModel: PaymentViewModel = PaymentViewModel(
-        paymentRepository = SesacRestaurantPaymentRepositoryImpl(
-            SesacOrderDataSource()
-        ),
-        salesRepository = SesacRestaurantSalesRepositoryImpl(SesacOrderDataSource())
-    )
+    private val viewModel: PaymentViewModel = SesacServiceLocator.get<PaymentViewModel>()
 ) : BaseScreen {
 
     override fun display() {

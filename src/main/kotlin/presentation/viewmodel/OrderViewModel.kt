@@ -2,11 +2,11 @@ package presentation.viewmodel
 
 import domain.model.Order
 import domain.model.SesacMenu
-import domain.repository.ISesacRestaurantOrderRepository
+import domain.usecase.OrderUseCase
 
-class OrderViewModel(private val orderRepository: ISesacRestaurantOrderRepository) {
+class OrderViewModel(private val orderUseCase: OrderUseCase) {
 
     fun order(menus: HashMap<SesacMenu, Int>, tableNumber: Int): Order {
-        return orderRepository.order(menus, tableNumber)
+        return orderUseCase.invoke(menus, tableNumber)
     }
 }

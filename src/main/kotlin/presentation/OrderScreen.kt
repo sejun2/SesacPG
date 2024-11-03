@@ -8,11 +8,7 @@ import presentation.viewmodel.OrderViewModel
 import utils.setMenus
 
 class OrderScreen(
-    private val orderViewModel: OrderViewModel = OrderViewModel(
-        orderRepository = SesacRestaurantOrderRepositoryImpl(
-            sesacOrderDataSource = SesacOrderDataSource()
-        )
-    )
+    private val orderViewModel: OrderViewModel = SesacServiceLocator.get<OrderViewModel>()
 ) : BaseScreen {
     override fun display() {
         println("주문하기")

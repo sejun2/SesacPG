@@ -8,11 +8,7 @@ import domain.model.toPrettyString
 import presentation.viewmodel.SalesViewModel
 
 class SalesScreen(
-    private val salesViewModel: SalesViewModel = SalesViewModel(
-        SesacRestaurantSalesRepositoryImpl(
-            SesacOrderDataSource()
-        )
-    )
+    private val salesViewModel: SalesViewModel = SesacServiceLocator.get<SalesViewModel>()
 ) : BaseScreen {
 
     override fun display() {
